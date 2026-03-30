@@ -49,8 +49,8 @@
         }
         
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0 auto 1.5rem;
@@ -60,6 +60,27 @@
             color: white;
             font-size: 2.5rem;
             font-weight: 300;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .avatar::after {
+            content: '添加照片';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .avatar:hover::after {
+            opacity: 1;
         }
         
         .content {
@@ -130,6 +151,48 @@
             color: #667eea;
         }
         
+        .photo-placeholder {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .placeholder-box {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            background: #f9f9f9;
+            transition: all 0.3s;
+        }
+        
+        .placeholder-box:hover {
+            border-color: #667eea;
+            background: #f1f3f9;
+        }
+        
+        .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .placeholder-box p {
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .placeholder-box small {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        code {
+            background: #f1f3f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #667eea;
+        }
+        
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -190,6 +253,24 @@
                 <p>我相信简单即是美。在复杂的世界中，找到本质，专注于真正重要的事物。</p>
                 <p>我重视持续学习和成长，认为每一天都是成为更好版本自己的机会。无论是通过阅读、实践还是与他人的交流，我都珍惜每一个学习时刻。</p>
                 <p>在数字时代，我努力在技术与人性之间找到平衡，让科技真正服务于人的需求，而不是反过来。</p>
+            </section>
+            
+            <section id="photo">
+                <h2>我的照片</h2>
+                <p>这里将展示我的个人照片。你可以：</p>
+                <ul class="contact-list">
+                    <li>上传一张个人照片到GitHub仓库</li>
+                    <li>将照片命名为 <code>photo.jpg</code> 或 <code>photo.png</code></li>
+                    <li>更新HTML代码中的图片路径</li>
+                    <li>页面将自动显示你的照片</li>
+                </ul>
+                <div class="photo-placeholder">
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">📸</div>
+                        <p>照片占位符</p>
+                        <small>上传照片后，这里将显示你的个人照片</small>
+                    </div>
+                </div>
             </section>
             
             <section id="contact">
