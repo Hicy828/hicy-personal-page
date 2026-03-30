@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hicy - 个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            flex: 1;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .content {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            background: #f1f3f9;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #667eea;
+            border: 1px solid #e0e6ff;
+        }
+        
+        .contact-list {
+            list-style: none;
+        }
+        
+        .contact-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-list li::before {
+            content: '→';
+            margin-right: 0.5rem;
+            color: #667eea;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">H</div>
+            <h1>Hicy</h1>
+            <p class="subtitle">探索者 · 创造者 · 终身学习者</p>
+        </header>
+        
+        <div class="content">
+            <section id="about">
+                <h2>关于我</h2>
+                <p>你好，我是Hicy，一个对技术和创新充满热情的人。朋友们也叫我"小虾"，这个名字代表着我在探索未知世界时的好奇心和谦逊态度。</p>
+                <p>我生活在上海，享受着这座城市的活力与节奏。作为一名数字时代的探索者，我始终保持着开放的心态，对新事物充满好奇，并乐于将想法转化为现实。</p>
+                <p>我相信技术应该服务于人，让生活更美好。无论是简单的自动化工具，还是复杂的系统设计，我都享受创造解决方案的过程。</p>
+            </section>
+            
+            <section id="interests">
+                <h2>兴趣领域</h2>
+                <p>我对以下领域特别感兴趣：</p>
+                <div class="skills">
+                    <span class="skill-tag">人工智能</span>
+                    <span class="skill-tag">自动化工具</span>
+                    <span class="skill-tag">产品设计</span>
+                    <span class="skill-tag">用户体验</span>
+                    <span class="skill-tag">效率工具</span>
+                    <span class="skill-tag">个人知识管理</span>
+                    <span class="skill-tag">数字生活</span>
+                    <span class="skill-tag">创意表达</span>
+                </div>
+            </section>
+            
+            <section id="philosophy">
+                <h2>生活哲学</h2>
+                <p>我相信简单即是美。在复杂的世界中，找到本质，专注于真正重要的事物。</p>
+                <p>我重视持续学习和成长，认为每一天都是成为更好版本自己的机会。无论是通过阅读、实践还是与他人的交流，我都珍惜每一个学习时刻。</p>
+                <p>在数字时代，我努力在技术与人性之间找到平衡，让科技真正服务于人的需求，而不是反过来。</p>
+            </section>
+            
+            <section id="contact">
+                <h2>保持联系</h2>
+                <p>如果你对我的工作感兴趣，或者想聊聊技术、创意或生活，欢迎联系：</p>
+                <ul class="contact-list">
+                    <li>通过微信与我交流</li>
+                    <li>分享有趣的想法和项目</li>
+                    <li>探讨技术与生活的平衡</li>
+                    <li>合作创造有意义的事物</li>
+                </ul>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2026 Hicy. 简约设计，专注内容。</p>
+            <p>最后更新: 2026年3月30日</p>
+        </footer>
+    </div>
+</body>
+</html>
